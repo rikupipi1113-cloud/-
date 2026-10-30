@@ -1,0 +1,251 @@
+{
+  "total": 41,
+  "cases": [
+    {
+      "name": "test_three_cycle_inheritance",
+      "suite": "tests.test_inheritance",
+      "seconds": "2.214",
+      "status": "passed"
+    },
+    {
+      "name": "test_corrupt_projection_blocks_then_repairs_without_history_loss",
+      "suite": "tests.test_inheritance",
+      "seconds": "0.098",
+      "status": "passed"
+    },
+    {
+      "name": "test_corrupt_journal_or_missing_evidence_stops",
+      "suite": "tests.test_inheritance",
+      "seconds": "0.043",
+      "status": "passed"
+    },
+    {
+      "name": "test_committed_journal_interrupted_projection_is_not_replayed",
+      "suite": "tests.test_inheritance",
+      "seconds": "0.068",
+      "status": "passed"
+    },
+    {
+      "name": "test_stale_review_and_wrong_source",
+      "suite": "tests.test_inheritance",
+      "seconds": "0.110",
+      "status": "passed"
+    },
+    {
+      "name": "test_unfinished_chatgpt_review_blocks_next",
+      "suite": "tests.test_inheritance",
+      "seconds": "0.150",
+      "status": "passed"
+    },
+    {
+      "name": "test_duplicate_schedule_and_revision_conflict",
+      "suite": "tests.test_inheritance",
+      "seconds": "0.074",
+      "status": "passed"
+    },
+    {
+      "name": "test_same_slot_after_review_refused",
+      "suite": "tests.test_inheritance",
+      "seconds": "0.165",
+      "status": "passed"
+    },
+    {
+      "name": "test_sync_failure_blocks_before_mutation",
+      "suite": "tests.test_inheritance",
+      "seconds": "0.142",
+      "status": "passed"
+    },
+    {
+      "name": "test_context_ack_must_cover_latest_full_history",
+      "suite": "tests.test_inheritance",
+      "seconds": "0.197",
+      "status": "passed"
+    },
+    {
+      "name": "test_actual_codex_worker_crash_preserves_checkpoint",
+      "suite": "tests.test_inheritance",
+      "seconds": "0.173",
+      "status": "passed"
+    },
+    {
+      "name": "test_checkpoint_pause_resume_same_cycle_and_deadline",
+      "suite": "tests.test_inheritance",
+      "seconds": "0.104",
+      "status": "passed"
+    },
+    {
+      "name": "test_unreviewed_or_accepted_hypothesis_is_not_lemma",
+      "suite": "tests.test_inheritance",
+      "seconds": "0.104",
+      "status": "passed"
+    },
+    {
+      "name": "test_new_version_retains_original_and_failure",
+      "suite": "tests.test_inheritance",
+      "seconds": "0.093",
+      "status": "passed"
+    },
+    {
+      "name": "test_invalid_formal_proof_never_registered",
+      "suite": "tests.test_inheritance",
+      "seconds": "0.072",
+      "status": "passed"
+    },
+    {
+      "name": "test_production_cannot_be_enabled_by_mock_configuration",
+      "suite": "tests.test_inheritance",
+      "seconds": "0.007",
+      "status": "passed"
+    },
+    {
+      "name": "test_jst_schedule_windows_and_review_slot",
+      "suite": "tests.test_inheritance",
+      "seconds": "0.088",
+      "status": "passed"
+    },
+    {
+      "name": "test_bounded_process_timeout_is_not_success",
+      "suite": "tests.test_inheritance",
+      "seconds": "0.204",
+      "status": "passed"
+    },
+    {
+      "name": "test_sync_write_helper_refuses_network_and_production",
+      "suite": "tests.test_inheritance",
+      "seconds": "0.049",
+      "status": "passed"
+    },
+    {
+      "name": "test_concurrent_scheduler_processes_admit_once",
+      "suite": "tests.test_inheritance",
+      "seconds": "0.127",
+      "status": "passed"
+    },
+    {
+      "name": "test_delayed_dispatch_does_not_extend_research_budget",
+      "suite": "tests.test_inheritance",
+      "seconds": "0.062",
+      "status": "passed"
+    },
+    {
+      "name": "test_closed_cycle_and_records_cannot_be_rewritten",
+      "suite": "tests.test_inheritance",
+      "seconds": "0.193",
+      "status": "passed"
+    },
+    {
+      "name": "test_known_solutions_and_rejection",
+      "suite": "tests.test_math",
+      "seconds": "0.000",
+      "status": "passed"
+    },
+    {
+      "name": "test_reject_invalid[0]",
+      "suite": "tests.test_math",
+      "seconds": "0.000",
+      "status": "passed"
+    },
+    {
+      "name": "test_reject_invalid[-1]",
+      "suite": "tests.test_math",
+      "seconds": "0.000",
+      "status": "passed"
+    },
+    {
+      "name": "test_reject_invalid[True]",
+      "suite": "tests.test_math",
+      "seconds": "0.000",
+      "status": "passed"
+    },
+    {
+      "name": "test_reject_invalid[1.0]",
+      "suite": "tests.test_math",
+      "seconds": "0.000",
+      "status": "passed"
+    },
+    {
+      "name": "test_exact_and_number_theory",
+      "suite": "tests.test_math",
+      "seconds": "0.001",
+      "status": "passed"
+    },
+    {
+      "name": "test_roundtrip_schema_and_no_overwrite",
+      "suite": "tests.test_state",
+      "seconds": "0.003",
+      "status": "passed"
+    },
+    {
+      "name": "test_unapproved_duplicate_and_stale",
+      "suite": "tests.test_state",
+      "seconds": "0.011",
+      "status": "passed"
+    },
+    {
+      "name": "test_initial_unapproved",
+      "suite": "tests.test_state",
+      "seconds": "0.003",
+      "status": "passed"
+    },
+    {
+      "name": "test_review_binding_and_gate",
+      "suite": "tests.test_state",
+      "seconds": "0.023",
+      "status": "passed"
+    },
+    {
+      "name": "test_rejected_review_blocks_next",
+      "suite": "tests.test_state",
+      "seconds": "0.019",
+      "status": "passed"
+    },
+    {
+      "name": "test_worker_lock_blocks_recovery",
+      "suite": "tests.test_state",
+      "seconds": "0.010",
+      "status": "passed"
+    },
+    {
+      "name": "test_atomic_interrupted_replace",
+      "suite": "tests.test_state",
+      "seconds": "0.006",
+      "status": "passed"
+    },
+    {
+      "name": "test_corruption_backup_explicit_restore",
+      "suite": "tests.test_state",
+      "seconds": "0.011",
+      "status": "passed"
+    },
+    {
+      "name": "test_actual_killed_worker",
+      "suite": "tests.test_state",
+      "seconds": "0.066",
+      "status": "passed"
+    },
+    {
+      "name": "test_demo",
+      "suite": "tests.test_state",
+      "seconds": "0.040",
+      "status": "passed"
+    },
+    {
+      "name": "test_concurrent_begin_only_one",
+      "suite": "tests.test_state",
+      "seconds": "0.067",
+      "status": "passed"
+    },
+    {
+      "name": "test_tampered_report_rejected",
+      "suite": "tests.test_state",
+      "seconds": "0.019",
+      "status": "passed"
+    },
+    {
+      "name": "test_result_normalizes_json_keys_and_rejects_nan",
+      "suite": "tests.test_state",
+      "seconds": "0.015",
+      "status": "passed"
+    }
+  ]
+}

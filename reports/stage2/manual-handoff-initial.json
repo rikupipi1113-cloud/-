@@ -1,0 +1,26 @@
+{
+  "protocol": 2,
+  "handoff": {
+    "protocol": 2,
+    "memory_head": "093120cb550899cc09985a3f4c6a395e2e999f525d2a96b504bff71f29108af2",
+    "context_sha256": "69392d5ec3a604dbc235480c9d5415268d63d02e43f7baf59959cb842fe2edb9",
+    "instruction_sha256": "35f36fec60c5cbf79d2accbafc17f3070f661c907010493a40aa6d6b35752182",
+    "last_review": null
+  },
+  "context": {
+    "memory_head": "093120cb550899cc09985a3f4c6a395e2e999f525d2a96b504bff71f29108af2",
+    "revision": 1,
+    "mode": "production",
+    "status": "pending",
+    "instruction": "Initial research instruction is not approved",
+    "cycles": [],
+    "cycle_bodies": [],
+    "records": [],
+    "context_sha256": "69392d5ec3a604dbc235480c9d5415268d63d02e43f7baf59959cb842fe2edb9"
+  },
+  "files": {
+    "events/00000001.json": "{\"operation\":\"initialize\",\"previous\":null,\"seq\":1,\"sha256\":\"093120cb550899cc09985a3f4c6a395e2e999f525d2a96b504bff71f29108af2\",\"state\":{\"bootstrap_approved\":false,\"cycles\":[],\"instruction\":\"c723dad4ae24cbfa11cf11300ab17b809d151beb05c83c7d17fbd561519cedd1\",\"mode\":\"production\",\"records\":[],\"revision\":1,\"schema_version\":2,\"slots\":[],\"status\":\"pending\"},\"time\":\"2026-10-30T07:33:57.420375+00:00\"}\n",
+    "objects/c723dad4ae24cbfa11cf11300ab17b809d151beb05c83c7d17fbd561519cedd1": "Initial research instruction is not approved",
+    "latest.json": "{\"head\":\"093120cb550899cc09985a3f4c6a395e2e999f525d2a96b504bff71f29108af2\",\"state\":{\"bootstrap_approved\":false,\"cycles\":[],\"instruction\":\"c723dad4ae24cbfa11cf11300ab17b809d151beb05c83c7d17fbd561519cedd1\",\"mode\":\"production\",\"records\":[],\"revision\":1,\"schema_version\":2,\"slots\":[],\"status\":\"pending\"}}\n"
+  }
+}

@@ -1,0 +1,23 @@
+.venv/
+.tools/
+__pycache__/
+.pytest_cache/
+*.egg-info/
+lean/.lake/
+*.lock
+*.bak
+*.tmp
+
+# Local simulation Git object databases (portable bundle is tracked instead)
+reports/stage2/**/shared.git/
+
+# Private environment evidence and generated distribution files
+.env
+.env.*
+*.pem
+*.key
+*.bundle
+*.tar.gz
+environment/commands.jsonl
+environment/stage2/connector_probe.json
+reports/environment_checks.json

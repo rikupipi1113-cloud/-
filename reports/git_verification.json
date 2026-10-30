@@ -1,0 +1,13 @@
+{
+  "initial_commit": "94c6e6caf72ee941fb12921095287a7459f805f7",
+  "tracked_file_count": 48,
+  "required_files_tracked": true,
+  "isolated_dependencies_excluded": true,
+  "remotes": [],
+  "commands": [
+    "git ls-files",
+    "git remote -v",
+    "git rev-parse HEAD"
+  ],
+  "final_verification": "Required files tracked; local history verified; no remotes; final commit follows this evidence file."
+}

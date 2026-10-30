@@ -1,0 +1,13 @@
+{
+  "protocol": 1,
+  "kind": "integration_probe",
+  "challenge_id": "075a1f8c-e996-414b-b97b-fcba8fe77d9e",
+  "fixture": [
+    2,
+    1,
+    2,
+    2
+  ],
+  "task": "Return challenge and request hash; independently check the integer identity. This does not authorize research or scheduling.",
+  "request_sha256": "acda8cef6fd25eb6abebdd2e8a8bd1c73ed4af5db58733650d1fbd352d70de66"
+}

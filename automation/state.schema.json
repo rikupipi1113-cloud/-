@@ -1,0 +1,163 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "revision",
+    "cycle_id",
+    "status",
+    "started_at",
+    "ended_at",
+    "task",
+    "instruction_approved",
+    "results",
+    "review",
+    "report",
+    "history"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "revision": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "cycle_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_-]+$"
+    },
+    "status": {
+      "enum": [
+        "pending",
+        "running",
+        "completed",
+        "awaiting_review",
+        "reviewed",
+        "failed"
+      ]
+    },
+    "started_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "ended_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "task": {
+      "type": "string",
+      "minLength": 1
+    },
+    "instruction_approved": {
+      "type": "boolean"
+    },
+    "results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "kind",
+          "claim",
+          "verification",
+          "data"
+        ],
+        "properties": {
+          "kind": {
+            "enum": [
+              "experiment",
+              "lemma",
+              "hypothesis",
+              "failure"
+            ]
+          },
+          "claim": {
+            "type": "string"
+          },
+          "verification": {
+            "enum": [
+              "unreviewed",
+              "python_exact",
+              "lean_kernel"
+            ]
+          },
+          "data": {
+            "type": "object"
+          }
+        }
+      }
+    },
+    "review": {
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "cycle_id",
+            "report_sha256",
+            "report_revision",
+            "verdict",
+            "reviewer",
+            "comments",
+            "next_instruction"
+          ],
+          "properties": {
+            "cycle_id": {
+              "type": "string"
+            },
+            "report_sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            "report_revision": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "verdict": {
+              "enum": [
+                "accepted",
+                "changes_requested"
+              ]
+            },
+            "reviewer": {
+              "type": "string",
+              "minLength": 1
+            },
+            "comments": {
+              "type": "string"
+            },
+            "next_instruction": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "report": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "history": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "revision": 0,
+  "cycle_id": "setup-000",
+  "status": "pending",
+  "started_at": null,
+  "ended_at": null,
+  "task": "環境構築のみ。研究開始は未承認。",
+  "instruction_approved": false,
+  "results": [],
+  "review": null,
+  "report": null,
+  "history": []
+}

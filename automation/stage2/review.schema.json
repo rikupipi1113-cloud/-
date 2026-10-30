@@ -1,0 +1,68 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "protocol": {
+      "const": 2
+    },
+    "cycle_id": {
+      "type": "string"
+    },
+    "report_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "memory_head": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "reviewer_kind": {
+      "enum": [
+        "mock",
+        "chatgpt"
+      ]
+    },
+    "reviewer": {
+      "type": "string"
+    },
+    "verdict": {
+      "enum": [
+        "accepted",
+        "changes_requested"
+      ]
+    },
+    "accepted_lemma_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "comments": {
+      "type": "string"
+    },
+    "next_instruction": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "reviewed_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "protocol",
+    "cycle_id",
+    "report_sha256",
+    "memory_head",
+    "reviewer_kind",
+    "reviewer",
+    "verdict",
+    "accepted_lemma_ids",
+    "comments",
+    "next_instruction",
+    "reviewed_at"
+  ]
+}

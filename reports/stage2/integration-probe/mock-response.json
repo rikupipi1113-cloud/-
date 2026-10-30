@@ -1,0 +1,10 @@
+{
+  "protocol": 1,
+  "kind": "integration_probe",
+  "challenge_id": "075a1f8c-e996-414b-b97b-fcba8fe77d9e",
+  "request_sha256": "acda8cef6fd25eb6abebdd2e8a8bd1c73ed4af5db58733650d1fbd352d70de66",
+  "responder": "MOCK",
+  "lhs": 16,
+  "rhs": 16,
+  "comments": "Validator self-test only; not independent ChatGPT execution."
+}

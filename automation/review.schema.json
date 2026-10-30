@@ -1,0 +1,45 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "cycle_id",
+    "report_sha256",
+    "report_revision",
+    "verdict",
+    "reviewer",
+    "comments",
+    "next_instruction"
+  ],
+  "properties": {
+    "cycle_id": {
+      "type": "string"
+    },
+    "report_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "report_revision": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "verdict": {
+      "enum": [
+        "accepted",
+        "changes_requested"
+      ]
+    },
+    "reviewer": {
+      "type": "string",
+      "minLength": 1
+    },
+    "comments": {
+      "type": "string"
+    },
+    "next_instruction": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

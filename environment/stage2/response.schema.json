@@ -1,0 +1,44 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "protocol",
+    "kind",
+    "challenge_id",
+    "request_sha256",
+    "responder",
+    "lhs",
+    "rhs",
+    "comments"
+  ],
+  "properties": {
+    "protocol": {
+      "const": 1
+    },
+    "kind": {
+      "const": "integration_probe"
+    },
+    "challenge_id": {
+      "type": "string"
+    },
+    "request_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "responder": {
+      "enum": [
+        "ChatGPT",
+        "MOCK"
+      ]
+    },
+    "lhs": {
+      "type": "integer"
+    },
+    "rhs": {
+      "type": "integer"
+    },
+    "comments": {
+      "type": "string"
+    }
+  }
+}

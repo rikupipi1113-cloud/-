@@ -1,0 +1,158 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.7.0 -- /path/to/erdos-straus-research/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: /path/to/erdos-straus-research
+configfile: pyproject.toml
+testpaths: tests
+collecting ... collected 41 items
+
+tests/test_inheritance.py::test_three_cycle_inheritance PASSED           [  2%]
+tests/test_inheritance.py::test_corrupt_projection_blocks_then_repairs_without_history_loss PASSED [  4%]
+tests/test_inheritance.py::test_corrupt_journal_or_missing_evidence_stops PASSED [  7%]
+tests/test_inheritance.py::test_committed_journal_interrupted_projection_is_not_replayed PASSED [  9%]
+tests/test_inheritance.py::test_stale_review_and_wrong_source PASSED     [ 12%]
+tests/test_inheritance.py::test_unfinished_chatgpt_review_blocks_next PASSED [ 14%]
+tests/test_inheritance.py::test_duplicate_schedule_and_revision_conflict PASSED [ 17%]
+tests/test_inheritance.py::test_same_slot_after_review_refused PASSED    [ 19%]
+tests/test_inheritance.py::test_sync_failure_blocks_before_mutation PASSED [ 21%]
+tests/test_inheritance.py::test_context_ack_must_cover_latest_full_history PASSED [ 24%]
+tests/test_inheritance.py::test_actual_codex_worker_crash_preserves_checkpoint PASSED [ 26%]
+tests/test_inheritance.py::test_checkpoint_pause_resume_same_cycle_and_deadline PASSED [ 29%]
+tests/test_inheritance.py::test_unreviewed_or_accepted_hypothesis_is_not_lemma PASSED [ 31%]
+tests/test_inheritance.py::test_new_version_retains_original_and_failure PASSED [ 34%]
+tests/test_inheritance.py::test_invalid_formal_proof_never_registered PASSED [ 36%]
+tests/test_inheritance.py::test_production_cannot_be_enabled_by_mock_configuration PASSED [ 39%]
+tests/test_inheritance.py::test_jst_schedule_windows_and_review_slot PASSED [ 41%]
+tests/test_inheritance.py::test_bounded_process_timeout_is_not_success PASSED [ 43%]
+tests/test_inheritance.py::test_sync_write_helper_refuses_network_and_production PASSED [ 46%]
+tests/test_inheritance.py::test_concurrent_scheduler_processes_admit_once PASSED [ 48%]
+tests/test_inheritance.py::test_delayed_dispatch_does_not_extend_research_budget PASSED [ 51%]
+tests/test_inheritance.py::test_closed_cycle_and_records_cannot_be_rewritten PASSED [ 53%]
+tests/test_math.py::test_known_solutions_and_rejection PASSED            [ 56%]
+tests/test_math.py::test_reject_invalid[0] PASSED                        [ 58%]
+tests/test_math.py::test_reject_invalid[-1] PASSED                       [ 60%]
+tests/test_math.py::test_reject_invalid[True] PASSED                     [ 63%]
+tests/test_math.py::test_reject_invalid[1.0] PASSED                      [ 65%]
+tests/test_math.py::test_exact_and_number_theory PASSED                  [ 68%]
+tests/test_state.py::test_roundtrip_schema_and_no_overwrite PASSED       [ 70%]
+tests/test_state.py::test_unapproved_duplicate_and_stale PASSED          [ 73%]
+tests/test_state.py::test_initial_unapproved PASSED                      [ 75%]
+tests/test_state.py::test_review_binding_and_gate PASSED                 [ 78%]
+tests/test_state.py::test_rejected_review_blocks_next PASSED             [ 80%]
+tests/test_state.py::test_worker_lock_blocks_recovery PASSED             [ 82%]
+tests/test_state.py::test_atomic_interrupted_replace PASSED              [ 85%]
+tests/test_state.py::test_corruption_backup_explicit_restore PASSED      [ 87%]
+tests/test_state.py::test_actual_killed_worker PASSED                    [ 90%]
+tests/test_state.py::test_demo PASSED                                    [ 92%]
+tests/test_state.py::test_concurrent_begin_only_one PASSED               [ 95%]
+tests/test_state.py::test_tampered_report_rejected PASSED                [ 97%]
+tests/test_state.py::test_result_normalizes_json_keys_and_rejects_nan PASSED [100%]
+
+==================================== PASSES ====================================
+_________________________ test_three_cycle_inheritance _________________________
+----------------------------- Captured stdout call -----------------------------
+{"mock_only": true, "real_chatgpt_roundtrip": false, "cycles": 3, "records": 10, "status": "reviewed", "history_preserved": true, "all_contexts_matched": true, "unreviewed_lemmas_promoted": false, "final_head": "02ece92c738a63f10ee688d66f83c1a72dcc3478daccef6adf8f5c4ae39cbafd"}
+_______ test_corrupt_projection_blocks_then_repairs_without_history_loss _______
+----------------------------- Captured stdout call -----------------------------
+corrupt projection: start refused; replay restored identical journal head
+________________ test_corrupt_journal_or_missing_evidence_stops ________________
+----------------------------- Captured stdout call -----------------------------
+corrupt journal/evidence: fail closed; no automatic fallback
+________ test_committed_journal_interrupted_projection_is_not_replayed _________
+----------------------------- Captured stdout call -----------------------------
+post-journal crash: explicit repair retained started cycle; duplicate start blocked
+______________________ test_stale_review_and_wrong_source ______________________
+----------------------------- Captured stdout call -----------------------------
+old report/head/cycle, unconfirmed source, mock boundary and replayed review: refused
+__________________ test_unfinished_chatgpt_review_blocks_next __________________
+----------------------------- Captured stdout call -----------------------------
+awaiting_review and partial review: next research blocked
+________________ test_duplicate_schedule_and_revision_conflict _________________
+----------------------------- Captured stdout call -----------------------------
+duplicate worker lock and stale revision: refused; current checkpoint retained
+_____________________ test_same_slot_after_review_refused ______________________
+----------------------------- Captured stdout call -----------------------------
+reviewed cycle does not authorize duplicate schedule slot
+___________________ test_sync_failure_blocks_before_mutation ___________________
+----------------------------- Captured stdout call -----------------------------
+unreachable and stale shared repository: start refused without journal update
+_______________ test_context_ack_must_cover_latest_full_history ________________
+----------------------------- Captured stdout call -----------------------------
+old context acknowledgement rejected; all earlier record ids inherited
+_____________ test_actual_codex_worker_crash_preserves_checkpoint ______________
+----------------------------- Captured stdout call -----------------------------
+real subprocess exit=23: checkpoint preserved; failed recovery blocks next cycle (worker simulation, not AI invocation)
+_____________ test_checkpoint_pause_resume_same_cycle_and_deadline _____________
+----------------------------- Captured stdout call -----------------------------
+checkpoint resume keeps cycle id and initial deadline; expired window refused
+_____________ test_unreviewed_or_accepted_hypothesis_is_not_lemma ______________
+----------------------------- Captured stdout call -----------------------------
+review cannot promote hypothesis/experiment to formally verified lemma
+________________ test_new_version_retains_original_and_failure _________________
+----------------------------- Captured stdout call -----------------------------
+superseded full text retained in current context and immutable events
+___________ test_production_cannot_be_enabled_by_mock_configuration ____________
+----------------------------- Captured stdout call -----------------------------
+production remains disabled and unapproved; mock config cannot bypass mode gate
+__________________ test_jst_schedule_windows_and_review_slot ___________________
+----------------------------- Captured stdout call -----------------------------
+JST research/review hours, missed-run refusal and matching review window verified
+_________________ test_bounded_process_timeout_is_not_success __________________
+----------------------------- Captured stdout call -----------------------------
+timeout terminates local test process group; preserves exclusive log; not an AI runtime guarantee
+____________ test_sync_write_helper_refuses_network_and_production _____________
+----------------------------- Captured stdout call -----------------------------
+simulation publisher cannot push to GitHub or publish production state
+________________ test_concurrent_scheduler_processes_admit_once ________________
+----------------------------- Captured stdout call -----------------------------
+two real dispatcher subprocesses: exactly one admitted, one blocked
+____________ test_delayed_dispatch_does_not_extend_research_budget _____________
+----------------------------- Captured stdout call -----------------------------
+4 minute late start: deadline remains original slot +5h
+______________ test_closed_cycle_and_records_cannot_be_rewritten _______________
+----------------------------- Captured stdout call -----------------------------
+rewritten historical record rejected even with recomputed current-event hash
+- generated xml file: /path/to/erdos-straus-research/reports/stage2/pytest-final.xml -
+=========================== short test summary info ============================
+PASSED tests/test_inheritance.py::test_three_cycle_inheritance
+PASSED tests/test_inheritance.py::test_corrupt_projection_blocks_then_repairs_without_history_loss
+PASSED tests/test_inheritance.py::test_corrupt_journal_or_missing_evidence_stops
+PASSED tests/test_inheritance.py::test_committed_journal_interrupted_projection_is_not_replayed
+PASSED tests/test_inheritance.py::test_stale_review_and_wrong_source
+PASSED tests/test_inheritance.py::test_unfinished_chatgpt_review_blocks_next
+PASSED tests/test_inheritance.py::test_duplicate_schedule_and_revision_conflict
+PASSED tests/test_inheritance.py::test_same_slot_after_review_refused
+PASSED tests/test_inheritance.py::test_sync_failure_blocks_before_mutation
+PASSED tests/test_inheritance.py::test_context_ack_must_cover_latest_full_history
+PASSED tests/test_inheritance.py::test_actual_codex_worker_crash_preserves_checkpoint
+PASSED tests/test_inheritance.py::test_checkpoint_pause_resume_same_cycle_and_deadline
+PASSED tests/test_inheritance.py::test_unreviewed_or_accepted_hypothesis_is_not_lemma
+PASSED tests/test_inheritance.py::test_new_version_retains_original_and_failure
+PASSED tests/test_inheritance.py::test_invalid_formal_proof_never_registered
+PASSED tests/test_inheritance.py::test_production_cannot_be_enabled_by_mock_configuration
+PASSED tests/test_inheritance.py::test_jst_schedule_windows_and_review_slot
+PASSED tests/test_inheritance.py::test_bounded_process_timeout_is_not_success
+PASSED tests/test_inheritance.py::test_sync_write_helper_refuses_network_and_production
+PASSED tests/test_inheritance.py::test_concurrent_scheduler_processes_admit_once
+PASSED tests/test_inheritance.py::test_delayed_dispatch_does_not_extend_research_budget
+PASSED tests/test_inheritance.py::test_closed_cycle_and_records_cannot_be_rewritten
+PASSED tests/test_math.py::test_known_solutions_and_rejection
+PASSED tests/test_math.py::test_reject_invalid[0]
+PASSED tests/test_math.py::test_reject_invalid[-1]
+PASSED tests/test_math.py::test_reject_invalid[True]
+PASSED tests/test_math.py::test_reject_invalid[1.0]
+PASSED tests/test_math.py::test_exact_and_number_theory
+PASSED tests/test_state.py::test_roundtrip_schema_and_no_overwrite
+PASSED tests/test_state.py::test_unapproved_duplicate_and_stale
+PASSED tests/test_state.py::test_initial_unapproved
+PASSED tests/test_state.py::test_review_binding_and_gate
+PASSED tests/test_state.py::test_rejected_review_blocks_next
+PASSED tests/test_state.py::test_worker_lock_blocks_recovery
+PASSED tests/test_state.py::test_atomic_interrupted_replace
+PASSED tests/test_state.py::test_corruption_backup_explicit_restore
+PASSED tests/test_state.py::test_actual_killed_worker
+PASSED tests/test_state.py::test_demo
+PASSED tests/test_state.py::test_concurrent_begin_only_one
+PASSED tests/test_state.py::test_tampered_report_rejected
+PASSED tests/test_state.py::test_result_normalizes_json_keys_and_rejects_nan
+============================== 41 passed in 5.33s ==============================

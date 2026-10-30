@@ -1,0 +1,219 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": 2
+    },
+    "revision": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "mode": {
+      "enum": [
+        "mock",
+        "production"
+      ]
+    },
+    "status": {
+      "enum": [
+        "pending",
+        "running",
+        "completed",
+        "awaiting_review",
+        "reviewed",
+        "failed"
+      ]
+    },
+    "instruction": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "bootstrap_approved": {
+      "type": "boolean"
+    },
+    "cycles": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "slot": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "enum": [
+              "running",
+              "completed",
+              "awaiting_review",
+              "reviewed",
+              "failed"
+            ]
+          },
+          "started_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "ended_at": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "deadline": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "inherited_head": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "inherited_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "context_sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "sync_commit": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{40,64}$"
+          },
+          "report": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "review": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "checkpoint": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "paused": {
+            "type": "boolean"
+          },
+          "instruction": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          }
+        },
+        "required": [
+          "id",
+          "slot",
+          "status",
+          "started_at",
+          "ended_at",
+          "deadline",
+          "inherited_head",
+          "inherited_ids",
+          "context_sha256",
+          "sync_commit",
+          "report",
+          "review",
+          "checkpoint",
+          "paused",
+          "instruction"
+        ]
+      }
+    },
+    "records": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^record-[0-9]{6}$"
+          },
+          "cycle_id": {
+            "type": "string"
+          },
+          "kind": {
+            "enum": [
+              "lemma",
+              "hypothesis",
+              "failed_approach",
+              "experiment",
+              "prior_work",
+              "open_problem",
+              "instruction",
+              "review"
+            ]
+          },
+          "title": {
+            "type": "string"
+          },
+          "body": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "evidence": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            }
+          },
+          "supersedes": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "verification": {
+            "enum": [
+              "lean_kernel",
+              "python_exact",
+              "unreviewed"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "cycle_id",
+          "kind",
+          "title",
+          "body",
+          "evidence",
+          "supersedes",
+          "verification"
+        ]
+      }
+    },
+    "slots": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    }
+  },
+  "required": [
+    "schema_version",
+    "revision",
+    "mode",
+    "status",
+    "instruction",
+    "bootstrap_approved",
+    "cycles",
+    "records",
+    "slots"
+  ],
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

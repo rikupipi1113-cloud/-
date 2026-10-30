@@ -1,0 +1,20 @@
+{
+  "src/es_research/state.py": "337d313033dbd6fca23cb3a9aab4edae9336574db04a9eba75c27dd32d600266",
+  "src/es_research/demo.py": "a4536ffdeca77e89680b5ce5f3c3434e276520016bb58acd6c54bdcce05dfd3c",
+  "src/es_research/scheduler.py": "762254bfdf694b4a960b70ab9b7c4e5d1102854329e7fa700eb7bbd61bfb8160",
+  "src/es_research/math.py": "258ba3190404eff6b157d914764f038781d4af802367f4c0f028be459c86eb27",
+  "src/es_research/bounded.py": "c39847c92394c4022b755f60d649eb81495bc9bb62aed175fe7ad54363158e55",
+  "src/es_research/cli.py": "1bcddf99e35cea13cf8c69a8bc9c8277ae64db82ffc124906ae28078f54c3946",
+  "src/es_research/stage2_cli.py": "2474981e47ba2c02c2fba54546703de0e9b930a7542de53a41e09731fa334f72",
+  "src/es_research/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "src/es_research/inheritance_demo.py": "fa3837ebbfb034a1aae273c3085f5b46fcf64f8b15c78c72ea2e5436f0a2b80b",
+  "src/es_research/exchange.py": "5130a4ce3b79137eed727a0ed1051857f160356aa70124b31afe2fe4b094ddc2",
+  "src/es_research/memory.py": "c0d9f402def7d4dc416398c9fb96be5ec422e60befa14738b8288cc0b59fc342",
+  "tests/test_inheritance.py": "fdc1486a5c4cca99747431415597a2452776d9f7c64fd365e18dffb319ed80c7",
+  "tests/test_math.py": "193d817f23b0ef7f3385ac4186fface2e8cb30116c6ab1990dbe81242f4a436c",
+  "tests/test_state.py": "e8c4afd74d6c12d1356c200a5629fa07f191f84373434e1313242f6c031a0db4",
+  "automation/stage2/review.schema.json": "edef9e909d3ba8dfce387df7b41797cff62eb44abc2622af40cf76ff7b29d775",
+  "automation/stage2/memory.schema.json": "ff2be1119924c8a9114c1aebe3c8fb738cb73c422f357c33301dcd00755d84b8",
+  "automation/stage2/schedule.json": "be584a35e74c5e85e92e9f0b19ed66348a440f05c606d3455104afa4b2e0d7f8",
+  "environment/stage2/lean_audit.txt": "e4772d1c499124e854e440a12f5c1b6812c480771ad821240bdd6d853e53ce92"
+}

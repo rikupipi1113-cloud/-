@@ -1,0 +1,12 @@
+{
+  "src/es_research/state.py": "337d313033dbd6fca23cb3a9aab4edae9336574db04a9eba75c27dd32d600266",
+  "src/es_research/demo.py": "a4536ffdeca77e89680b5ce5f3c3434e276520016bb58acd6c54bdcce05dfd3c",
+  "src/es_research/math.py": "258ba3190404eff6b157d914764f038781d4af802367f4c0f028be459c86eb27",
+  "src/es_research/cli.py": "1bcddf99e35cea13cf8c69a8bc9c8277ae64db82ffc124906ae28078f54c3946",
+  "src/es_research/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "tests/test_math.py": "193d817f23b0ef7f3385ac4186fface2e8cb30116c6ab1990dbe81242f4a436c",
+  "tests/test_state.py": "e8c4afd74d6c12d1356c200a5629fa07f191f84373434e1313242f6c031a0db4",
+  "lean/ErdosStrausResearch.lean": "23b6363180ea79e0b5be8bc49823b6d25afc14124be0f96a9f5fe817f19cf4c7",
+  "lean/lean-toolchain": "55e97be96000b5e9e290c9e74482e5e317861499a5540353ce845471bded8cea",
+  "lean/lake-manifest.json": "6f55dd743ea0a35a68c9f8b58d3fe4597d72fd3aae8ffb6243822567fdf7e9b9"
+}

@@ -1,0 +1,24 @@
+{
+  "enabled": false,
+  "mode": "production",
+  "timezone": "Asia/Tokyo",
+  "research_hours": [
+    0,
+    6,
+    12,
+    18
+  ],
+  "review_hours": [
+    5,
+    11,
+    17,
+    23
+  ],
+  "research_budget_seconds": 18000,
+  "review_target_seconds": 1200,
+  "reserve_seconds": 2400,
+  "start_grace_seconds": 300,
+  "remote": "https://github.com/rikupipi1113-cloud/-.git",
+  "ref": "refs/heads/research-memory",
+  "integration_verified": false
+}

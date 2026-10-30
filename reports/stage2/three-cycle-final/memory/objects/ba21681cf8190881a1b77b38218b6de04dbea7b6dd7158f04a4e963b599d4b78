@@ -1,0 +1,1 @@
+A float tolerance could accept a wrong candidate. Use the integer equality instead. This is a recorded design failure, not a new mathematical result.
